@@ -71,7 +71,7 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
                                 
                                 if entered_site == 'ALL':
                                     fig2 = px.scatter(
-                                        filtered_df, x="Pay LLoad Mass (kg)", y="Class", color="Booster Version Category")
+                                        filtered_df, x="Pay Load Mass (kg)", y="Class", color="Booster Version Category")
                                     return fig2
                                 else:
                                     filtered_df = filtered_df[filtered_df['Launch Site'] == entered_site]
@@ -90,4 +90,3 @@ app.layout = html.Div(children=[html.H1('SpaceX Launch Records Dashboard',
 # Run the app
 if __name__ == '__main__':
     app.run_server()
-
